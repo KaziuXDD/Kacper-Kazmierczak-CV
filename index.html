@@ -3,35 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kacper Kaźmierczak - Portfolio IT</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #666;
-        }
-    </style>
+    <title>Kacper Kaźmierczak - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Cześć, tu Kacper! 👋</h1>
-        <p>To jest początek mojego portfolio. Wkrótce będzie tu wyglądać jak na Holarara!</p>
+        <nav>
+            <div class="logo">Kacper Kaźmierczak <span>;)</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Start</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#experience">Doświadczenie</a></li>
+                <li><a href="#education">Edukacja</a></li>
+                <li><a href="#skills">Umiejętności</a></li>
+                <li><a href="#certifications">Certyfikaty</a></li>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="en.html" class="lang-switch">🇬🇧 EN</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <main>
+        <!-- Sekcja Główna -->
+        <section id="hero">
+            <h1>Cześć, nazywam się Kacper Kaźmierczak. <br>Rozwijam się w świecie IT.</h1>
+            <p>Eksploruję technologie, buduję własne projekty i stale poszerzam swoją wiedzę. Szukam możliwości rozwoju i nowych wyzwań technicznych.</p>
+            <div>
+                <a href="#projects" class="btn">Moje realizacje</a>
+                <a href="#" class="btn btn-outline">Pobierz CV (wkrótce)</a>
+            </div>
+        </section>
+
+        <!-- NOWE: Sekcja O mnie -->
+        <section id="about">
+            <h2 class="section-title">O <span>mnie</span></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                Cześć! Jestem osobą, która z pasją odkrywa świat IT. Interesuję się nowymi technologiami i nieustannie szukam możliwości do nauki. Na co dzień eksperymentuję z różnymi narzędziami, rozwiązuję problemy sprzętowo-systemowe i tworzę pierwsze projekty. Zależy mi na zdobywaniu praktycznego doświadczenia.
+            </p>
+        </section>
+
+        <!-- NOWE: Sekcja Doświadczenie -->
+        <section id="experience">
+            <h2 class="section-title">Moje <span>Doświadczenie</span></h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <h3>Nazwa Twojego Stanowiska (np. Praktykant IT)</h3>
+                    <h4>Nazwa Firmy | Miesiąc Rok - Obecnie</h4>
+                    <p>Opisz krótko, czym się zajmowałeś lub zajmujesz. Jeśli nie masz jeszcze doświadczenia komercyjnego, możesz tu wpisać np. udział w wolontariatach, projektach szkolnych lub własnych dużych inicjatywach.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NOWE: Sekcja Edukacja -->
+        <section id="education">
+            <h2 class="section-title">Moja <span>Edukacja</span></h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <h3>Kierunek / Profil Klasy (np. Technik Informatyk)</h3>
+                    <h4>Nazwa Twojej Szkoły lub Uczelni | Rok Rozpoczęcia - Rok Zakończenia</h4>
+                    <p>Czego uczyłeś się w szkole? Wymień najciekawsze przedmioty zawodowe, projekty zrealizowane w ramach zajęć lub zdobyte kwalifikacje (np. INF.02, INF.03).</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sekcja Umiejętności (dawniej O mnie) -->
+        <section id="skills">
+            <h2 class="section-title">Technologie & <span>Narzędzia</span></h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Nie zamykam się w jednej technologii. Aktualnie buduję szeroki fundament wiedzy, który pozwala mi zrozumieć różne aspekty działania systemów i aplikacji.
+            </p>
+            <div class="skills-grid">
+                <div class="skill-tag">HTML & CSS</div>
+                <div class="skill-tag">Podstawy Python</div>
+                <div class="skill-tag">Git & GitHub</div>
+                <div class="skill-tag">Systemy Linux</div>
+                <div class="skill-tag">Rozwiązywanie problemów (Troubleshooting)</div>
+            </div>
+        </section>
+
+        <!-- NOWE: Sekcja Certyfikaty -->
+        <section id="certifications">
+            <h2 class="section-title">Moje <span>Certyfikaty</span></h2>
+            <div class="projects-grid"> <!-- Używamy tego samego gridu co w projektach dla spójności -->
+                
+                <div class="project-card">
+                    <h3>Nazwa Certyfikatu (np. Cisco IT Essentials)</h3>
+                    <p>Instytucja wydająca: np. Cisco Networking Academy. Certyfikat potwierdzający znajomość budowy komputerów i podstaw systemów operacyjnych.</p>
+                    <div class="tech-stack">Data uzyskania: 2025</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sekcja Projekty -->
+        <section id="projects">
+            <h2 class="section-title">Wybrane <span>Projekty</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Portfolio One-Page</h3>
+                    <p>Osobista wizytówka internetowa hostowana za pomocą GitHub Pages. Zaprojektowana od zera, z wykorzystaniem nowoczesnego podejścia do stylów i responsywności.</p>
+                    <div class="tech-stack">HTML &bull; CSS &bull; GitHub Pages</div>
+                    <a href="https://github.com/KaziuXDD/KaziuXDD.github.io" target="_blank">Zobacz kod na GitHubie &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Miejsce na Twój projekt</h3>
+                    <p>Tutaj wkrótce pojawi się opis mojego kolejnego technicznego eksperymentu, skryptu lub aplikacji.</p>
+                    <div class="tech-stack">Technologia 1 &bull; Technologia 2</div>
+                    <a href="#">Wkrótce &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer id="contact">
+        <h2 style="margin-bottom: 20px;">Porozmawiajmy!</h2>
+        <p style="color: var(--text-muted); margin-bottom: 30px;">Zawsze jestem otwarty na nowe propozycje i chętnie odpowiem na wiadomości.</p>
+        
+        <div class="social-links">
+            <a href="mailto:twoj@email.com">Napisz e-mail</a>
+            <a href="https://github.com/KaziuXDD" target="_blank">Mój GitHub</a>
+            <a href="#" target="_blank">Mój LinkedIn</a>
+        </div>
+        <p style="color: #475569; font-size: 0.9rem; margin-top: 40px;">&copy; 2026 Kacper Kaźmierczak. Zbudowane samodzielnie.</p>
+    </footer>
 
 </body>
 </html>
