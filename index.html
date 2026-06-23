@@ -28,7 +28,7 @@
     <main>
         <!-- Sekcja Główna -->
         <section id="hero">
-            <h1>Cześć, nazywam się Kacper Kaźmierczak. <br>Rozwijam się w świecie IT.</h1>
+            <h1>Cześć, nazywam się <br>Kacper Kaźmierczak. <br>Rozwijam się w świecie IT.</h1>
             <p>Eksploruję technologie, buduję własne projekty i stale poszerzam swoją wiedzę. Szukam możliwości rozwoju i nowych wyzwań technicznych.</p>
             <div>
                 <a href="#projects" class="btn">Moje realizacje</a>
@@ -38,10 +38,17 @@
 
         <!-- NOWE: Sekcja O mnie -->
         <section id="about">
-            <h2 class="section-title">O <span>mnie</span></h2>
-            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-                Cześć! Jestem osobą, która z pasją odkrywa świat IT. Interesuję się nowymi technologiami i nieustannie szukam możliwości do nauki. Na co dzień eksperymentuję z różnymi narzędziami, rozwiązuję problemy sprzętowo-systemowe i tworzę pierwsze projekty. Zależy mi na zdobywaniu praktycznego doświadczenia.
-            </p>
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Zdjęcie Kacpra Kaźmierczaka" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">O <span>mnie</span></h2>
+                <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                    Jestem osobą, która z pasją odkrywa świat IT. Interesuję się nowymi technologiami i nieustannie szukam możliwości do nauki. 
+                    Na co dzień eksperymentuję z różnymi narzędziami, rozwiązuję problemy sprzętowo-systemowe i tworzę pierwsze projekty. 
+                    Zależy mi na zdobywaniu praktycznego doświadczenia.
+                </p>
+            </div>
         </section>
 
         <!-- NOWE: Sekcja Doświadczenie -->
@@ -49,6 +56,11 @@
             <h2 class="section-title">Moje <span>Doświadczenie</span></h2>
             <div class="timeline">
                 
+                <div class="timeline-item">
+                    <h3>Nazwa Twojego Stanowiska (np. Praktykant IT)</h3>
+                    <h4>Nazwa Firmy | Miesiąc Rok - Obecnie</h4>
+                    <p>Opisz krótko, czym się zajmowałeś lub zajmujesz. Jeśli nie masz jeszcze doświadczenia komercyjnego, możesz tu wpisać np. udział w wolontariatach, projektach szkolnych lub własnych dużych inicjatywach.</p>
+                </div>
                 <div class="timeline-item">
                     <h3>Nazwa Twojego Stanowiska (np. Praktykant IT)</h3>
                     <h4>Nazwa Firmy | Miesiąc Rok - Obecnie</h4>
@@ -63,6 +75,11 @@
             <h2 class="section-title">Moja <span>Edukacja</span></h2>
             <div class="timeline">
                 
+                <div class="timeline-item">
+                    <h3>Kierunek / Profil Klasy (np. Technik Informatyk)</h3>
+                    <h4>Nazwa Twojej Szkoły lub Uczelni | Rok Rozpoczęcia - Rok Zakończenia</h4>
+                    <p>Czego uczyłeś się w szkole? Wymień najciekawsze przedmioty zawodowe, projekty zrealizowane w ramach zajęć lub zdobyte kwalifikacje (np. INF.02, INF.03).</p>
+                </div>
                 <div class="timeline-item">
                     <h3>Kierunek / Profil Klasy (np. Technik Informatyk)</h3>
                     <h4>Nazwa Twojej Szkoły lub Uczelni | Rok Rozpoczęcia - Rok Zakończenia</h4>
@@ -87,17 +104,34 @@
             </div>
         </section>
 
-        <!-- NOWE: Sekcja Certyfikaty -->
+        <!-- Sekcja Certyfikaty (Układ Listy) -->
         <section id="certifications">
             <h2 class="section-title">Moje <span>Certyfikaty</span></h2>
-            <div class="projects-grid"> <!-- Używamy tego samego gridu co w projektach dla spójności -->
-                
-                <div class="project-card">
-                    <h3>Nazwa Certyfikatu (np. Cisco IT Essentials)</h3>
-                    <p>Instytucja wydająca: np. Cisco Networking Academy. Certyfikat potwierdzający znajomość budowy komputerów i podstaw systemów operacyjnych.</p>
-                    <div class="tech-stack">Data uzyskania: 2025</div>
+            
+            <div class="cert-list">
+                <!-- Pozycja 1 -->
+                <div class="cert-item">
+                    <div class="cert-name highlight">Google AI Professional Certificate</div>
+                    <div class="cert-meta">Google, 2026</div>
                 </div>
 
+                <!-- Pozycja 2 -->
+                <div class="cert-item">
+                    <div class="cert-name highlight">SQL Advanced Certificate</div>
+                    <div class="cert-meta">HackerRank, 2025</div>
+                </div>
+
+                <!-- Pozycja 3 -->
+                <div class="cert-item">
+                    <div class="cert-name highlight">Software Processes and Agile Practices</div>
+                    <div class="cert-meta">University of Alberta, 2024</div>
+                </div>
+
+                <!-- Pozycja 4 (Zwykły biały tekst jak na obrazku) -->
+                <div class="cert-item">
+                    <div class="cert-name">TOGAF 9 Foundation</div>
+                    <div class="cert-meta">Asseco Data Systems, 2017</div>
+                </div>
             </div>
         </section>
 

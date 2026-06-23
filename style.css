@@ -276,3 +276,66 @@
 .timeline-item p {
     color: var(--text-muted);
 }
+
+about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- LISTA CERTYFIKATÓW --- */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid #334155; /* Górna linia oddzielająca (jak na zdjęciu) */
+}
+
+.cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px;
+    border-bottom: 1px solid #233043; /* Delikatna linia pod każdym elementem */
+    transition: background-color 0.2s ease;
+}
+
+/* Efekt najechania myszką (Hover) */
+.cert-item:hover {
+    background-color: rgba(56, 189, 248, 0.08); /* Lekkie, niebieskawe podświetlenie tła */
+}
+
+/* Styl nazwy certyfikatu (lewa strona) */
+.cert-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-main); /* Domyślnie biały tekst */
+}
+
+/* Klasa dla kolorowego tekstu z obrazka (miętowy/jasnozielony) */
+.cert-name.highlight {
+    color: #5eead4; /* Miętowy odcień, dopasowany do ciemnego tła */
+}
+
+/* Styl dla wydawcy i daty (prawa strona) */
+.cert-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: right;
+    white-space: nowrap; /* Zapobiega łamaniu daty na dwie linijki */
+}
+
+/* --- RESPONSyWNOŚĆ CERTYFIKATÓW (Dla telefonów) --- */
+@media (max-width: 600px) {
+    .cert-item {
+        flex-direction: column; /* Na małym ekranie zrzuca datę pod spód */
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .cert-meta {
+        text-align: left;
+        font-size: 0.85rem;
+    }
+}
