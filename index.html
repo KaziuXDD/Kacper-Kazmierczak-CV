@@ -28,7 +28,7 @@
     <main>
         <!-- Sekcja Główna -->
         <section id="hero">
-            <h1>Cześć, nazywam się <br>Kacper Kaźmierczak. <br>Rozwijam się w świecie IT.</h1>
+            <h1>Cześć, nazywam się <br><span style="color: rgb(0, 140, 255);">Kacper Kaźmierczak</span> <br>Rozwijam się w świecie IT.</h1>
             <p>Eksploruję technologie, buduję własne projekty i stale poszerzam swoją wiedzę. Szukam możliwości rozwoju i nowych wyzwań technicznych.</p>
             <div>
                 <a href="#projects" class="btn">Moje realizacje</a>
@@ -36,106 +36,160 @@
             </div>
         </section>
 
-        <!-- NOWE: Sekcja O mnie -->
+    <!-- Sekcja O mnie (Dwie kolumny) -->
         <section id="about">
-            <div class="about-image">
-                <img src="images/profile.jpg" alt="Zdjęcie Kacpra Kaźmierczaka" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover;">
-            </div>
-            <div class="about-content">
-                <h2 class="section-title">O <span>mnie</span></h2>
-                <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-                    Jestem osobą, która z pasją odkrywa świat IT. Interesuję się nowymi technologiami i nieustannie szukam możliwości do nauki. 
-                    Na co dzień eksperymentuję z różnymi narzędziami, rozwiązuję problemy sprzętowo-systemowe i tworzę pierwsze projekty. 
-                    Zależy mi na zdobywaniu praktycznego doświadczenia.
-                </p>
-            </div>
+            <div class="about-container">
+                
+                <!-- LEWA KOLUMNA: Karta ze zdjęciem i animacją -->
+                <div class="about-sidebar">
+                    <div class="sidebar-inner">
+                        <div class="blob"></div>
+                        <div class="glass-content">
+                            <img src="images/profile.png" alt="Zdjęcie Kacpra Kaźmierczaka" class="profile-pic">
+                            <h3>Kacper Kaźmierczak</h3>
+                            <p class="role">Student IT</p>
+                            <p class="location">Poznań, Polska</p>
+                            
+                            <p class="education-mini">
+                                Informatyka<br>
+                                Uniwersytet WSB Merito
+                            </p>
+                            
+                            <p class="tech-mini">
+                                HTML, CSS, Python, Linux
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRAWA KOLUMNA: Główny tekst -->
+                <div class="about-main">
+                    <h2 class="about-heading">O <span>mnie</span></h2>
+                    
+                    <p>
+                        Cześć! Nazywam się Kacper. Aktualnie studiuję <strong>informatykę na Uniwersytecie WSB Merito w Poznaniu</strong> i stawiam swoje pierwsze kroki w branży IT.
+                    </p>
+                    
+                    <p>
+                        Bardzo lubię rozumieć, jak rzeczy działają po same szczegóły, od budowania stron w HTML, przez proste skrypty w <strong>Pythonie</strong>, aż po <strong>konfigurację systemu</strong>. Jestem osobą proaktywną, która chętnie eksperymentuje z nowymi narzędziami.
+                    </p>
+                    
+                    <p>
+                        Poza nauką i technologią chętnie uprawiam sport, a w wolnym czasie relaksuję się przy dobrych grach komputerowych z kumplami. Moim aktualnym celem jest zdobycie <strong>praktycznego doświadczenia</strong> i dołączenie do świata IT.
+                    </p>
+                </div>
+                
+            </div> <!-- Koniec about-container -->
         </section>
 
-        <!-- NOWE: Sekcja Doświadczenie -->
+        <!-- Sekcja Doświadczenie -->
         <section id="experience">
             <h2 class="section-title">Moje <span>Doświadczenie</span></h2>
             <div class="timeline">
                 
                 <div class="timeline-item">
-                    <h3>Nazwa Twojego Stanowiska (np. Praktykant IT)</h3>
-                    <h4>Nazwa Firmy | Miesiąc Rok - Obecnie</h4>
-                    <p>Opisz krótko, czym się zajmowałeś lub zajmujesz. Jeśli nie masz jeszcze doświadczenia komercyjnego, możesz tu wpisać np. udział w wolontariatach, projektach szkolnych lub własnych dużych inicjatywach.</p>
+                    <h3>Młodszy specjalista ds. wdrażania projektów</h3>
+                    <h4>MGI Polska | Wrzesień 2024 - Obecnie</h4>
+                    
+                    <p style="margin-bottom: 10px;">Do moich głównych obowiązków na tym stanowisku należy:</p>
+                    
+                    <ul style="color: var(--text-muted); padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Wsparcie techniczne:</strong> Zdalna i telefoniczna pomoc dla użytkowników systemu Aramis oraz platformy e-commerce (I linia wsparcia).</li>
+                        <li><strong>Zarządzanie incydentami:</strong> Prowadzenie rejestru zgłoszeń, diagnozowanie problemów i eskalacja błędów do zespołów odpowiedzialnych za utrzymanie.</li>
+                        <li><strong>Testowanie oprogramowania:</strong> Przeprowadzanie manualnych testów powdrożeniowych (weryfikacja naprawionych błędów i nowych funkcjonalności).</li>
+                        <li><strong>Dokumentacja:</strong> Tworzenie czytelnych instrukcji obsługi oraz bazy wiedzy dla użytkowników końcowych.</li>
+                    </ul>
                 </div>
+
                 <div class="timeline-item">
-                    <h3>Nazwa Twojego Stanowiska (np. Praktykant IT)</h3>
-                    <h4>Nazwa Firmy | Miesiąc Rok - Obecnie</h4>
-                    <p>Opisz krótko, czym się zajmowałeś lub zajmujesz. Jeśli nie masz jeszcze doświadczenia komercyjnego, możesz tu wpisać np. udział w wolontariatach, projektach szkolnych lub własnych dużych inicjatywach.</p>
+                    <h3>Wsparcie techniczne (Helpdesk)</h3>
+                    <h4>Komenda Powiatowa Państwowej Straży Pożarnej we Wrześni | Październik 2023 - Wrzesień 2024</h4>
+                    
+                    <p style="margin-bottom: 10px;">Do moich głównych obowiązków na tym stanowisku należało:</p>
+                    
+                    <ul style="color: var(--text-muted); padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Wsparcie użytkowników:</strong> Świadczenie bieżącej pomocy technicznej (I linia wsparcia) dla pracowników cywilnych oraz funkcjonariuszy w zakresie obsługi sprzętu komputerowego i oprogramowania.</li>
+                        <li><strong>Utrzymanie infrastruktury:</strong> Instalacja, konfiguracja oraz konserwacja stacji roboczych, laptopów, drukarek, urządzeń peryferyjnych oraz sprzętu łączności.</li>
+                        <li><strong>Rozwiązywanie problemów:</strong> Diagnozowanie i usuwanie bieżących awarii sprzętowych, systemowych oraz problemów z siecią lokalną.</li>
+                        <li><strong>Ewidencja i dokumentacja:</strong> Przygotowywanie i wdrażanie nowych stanowisk komputerowych, prowadzenie inwentaryzacji zasobów IT oraz tworzenie wewnętrznych instrukcji technicznych.</li>
+                    </ul>
                 </div>
 
             </div>
         </section>
 
-        <!-- NOWE: Sekcja Edukacja -->
+        <!-- Sekcja Edukacja -->
         <section id="education">
             <h2 class="section-title">Moja <span>Edukacja</span></h2>
             <div class="timeline">
                 
                 <div class="timeline-item">
-                    <h3>Kierunek / Profil Klasy (np. Technik Informatyk)</h3>
-                    <h4>Nazwa Twojej Szkoły lub Uczelni | Rok Rozpoczęcia - Rok Zakończenia</h4>
-                    <p>Czego uczyłeś się w szkole? Wymień najciekawsze przedmioty zawodowe, projekty zrealizowane w ramach zajęć lub zdobyte kwalifikacje (np. INF.02, INF.03).</p>
+                    <h3>Studia I stopnia - kierunek Informatyka</h3>
+                    <h4>Universytet WSB Merito w Poznaniu | 2023 - obecnie</h4>
                 </div>
                 <div class="timeline-item">
-                    <h3>Kierunek / Profil Klasy (np. Technik Informatyk)</h3>
-                    <h4>Nazwa Twojej Szkoły lub Uczelni | Rok Rozpoczęcia - Rok Zakończenia</h4>
-                    <p>Czego uczyłeś się w szkole? Wymień najciekawsze przedmioty zawodowe, projekty zrealizowane w ramach zajęć lub zdobyte kwalifikacje (np. INF.02, INF.03).</p>
+                    <h3>Technik Informatyk</h3>
+                    <h4>Zespół Szkół Politechnicznych we Wrześni | 2019 - 2023</h4>
                 </div>
 
             </div>
         </section>
 
-        <!-- Sekcja Umiejętności (dawniej O mnie) -->
+        <!-- Sekcja Umiejętności -->
         <section id="skills">
-            <h2 class="section-title">Technologie & <span>Narzędzia</span></h2>
+            <h2 class="section-title">Umiejętności & <span>Narzędzia</span></h2>
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Nie zamykam się w jednej technologii. Aktualnie buduję szeroki fundament wiedzy, który pozwala mi zrozumieć różne aspekty działania systemów i aplikacji.
             </p>
             <div class="skills-grid">
-                <div class="skill-tag">HTML & CSS</div>
-                <div class="skill-tag">Podstawy Python</div>
+                <div class="skill-tag">HTML</div>
+                <div class="skill-tag">CSS</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">SQL</div>
                 <div class="skill-tag">Git & GitHub</div>
-                <div class="skill-tag">Systemy Linux</div>
-                <div class="skill-tag">Rozwiązywanie problemów (Troubleshooting)</div>
+                <div class="skill-tag">Linux</div>
+                <div class="skill-tag">Windows</div>
             </div>
         </section>
 
-        <!-- Sekcja Certyfikaty (Układ Listy) -->
+        <!-- Sekcja Certyfikaty -->
         <section id="certifications">
             <h2 class="section-title">Moje <span>Certyfikaty</span></h2>
             
             <div class="cert-list">
-                <!-- Pozycja 1 -->
                 <div class="cert-item">
-                    <div class="cert-name highlight">Google AI Professional Certificate</div>
-                    <div class="cert-meta">Google, 2026</div>
+                    <a href="https://navoica.pl/certificates/fa1247d4c78c491a90722f70289f905e" target="_blank">
+                        <div class="cert-name highlight">Podstawy sztucznej inteligencji</div>
+                    </a>
+                    <div class="cert-meta">Navoica, 2026</div>
                 </div>
 
-                <!-- Pozycja 2 -->
                 <div class="cert-item">
-                    <div class="cert-name highlight">SQL Advanced Certificate</div>
-                    <div class="cert-meta">HackerRank, 2025</div>
+                    <a href="https://navoica.pl/certificates/19e25b0a643c4cf3883a55a0e93643d6" target="_blank">
+                        <div class="cert-name highlight">Website development</div>
+                    </a>
+                    <div class="cert-meta">Navoica, 2025</div>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-name highlight">Dyplom technika informatyki</div>
+                    <div class="cert-meta">Zespół Szkół Politechnicznych we Wrześni, 2023</div>
                 </div>
 
-                <!-- Pozycja 3 -->
                 <div class="cert-item">
-                    <div class="cert-name highlight">Software Processes and Agile Practices</div>
-                    <div class="cert-meta">University of Alberta, 2024</div>
+                    <div class="cert-name highlight">INF.03 - Tworzenie i administrowanie stronami internetowymi oraz bazami danych</div>
+                    <div class="cert-meta">Zespół Szkół Politechnicznych we Wrześni, 2023</div>
                 </div>
 
-                <!-- Pozycja 4 (Zwykły biały tekst jak na obrazku) -->
                 <div class="cert-item">
-                    <div class="cert-name">TOGAF 9 Foundation</div>
-                    <div class="cert-meta">Asseco Data Systems, 2017</div>
+                    <div class="cert-name highlight">INF.02 - Administracja systemów komputerowych i sieci lokalnych</div>
+                    <div class="cert-meta">Zespół Szkół Politechnicznych we Wrześni, 2022</div>
                 </div>
+
             </div>
         </section>
 
-        <!-- Sekcja Projekty -->
+        <!-- Sekcja Projekty 
         <section id="projects">
             <h2 class="section-title">Wybrane <span>Projekty</span></h2>
             <div class="projects-grid">
@@ -155,7 +209,7 @@
             </div>
         </section>
     </main>
-
+-->
     <!-- Stopka -->
     <footer id="contact">
         <h2 style="margin-bottom: 20px;">Porozmawiajmy!</h2>

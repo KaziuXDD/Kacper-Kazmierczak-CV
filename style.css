@@ -98,7 +98,7 @@
         /* --- WSPÓLNE DLA SEKCJI --- */
         section {
             padding: 100px 20px;
-            max-width: 1100px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
@@ -243,7 +243,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -277,17 +277,188 @@
     color: var(--text-muted);
 }
 
-about-me {
-    max-width: 800px;
+/* =========================================
+   SEKCJA O MNIE (Dwie kolumny)
+   ========================================= */
+
+/* 1. Główny kontener - układa lewą i prawą stronę obok siebie */
+.about-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1000px;
     margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* =========================================
+   LEWA STRONA (Karta z animacją i szkłem)
+   ========================================= */
+
+.about-sidebar {
+    position: relative;
+    flex: 0 0 320px; /* Sztywna szerokość karty */
+    width: 320px;
+    border-radius: 16px;
+    z-index: 1;
+    overflow: hidden;
+    padding: 2px; /* Grubość świetlnej ramki */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Obracający się gradient (ramka) */
+.about-sidebar::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 60%, var(--accent) 100%);
+    z-index: -2;
+    animation: rotate-border 4s linear infinite;
+}
+
+@keyframes rotate-border {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Wewnętrzny kontener zasłaniający środek ramki */
+.sidebar-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-color);
+    border-radius: 14px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Pływająca kula światła pod tekstem */
+.sidebar-inner .blob {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    opacity: 0.7;
+    filter: blur(40px);
+    animation: blob-bounce 6s infinite ease-in-out;
+}
+
+@keyframes blob-bounce {
+    0% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+    25% { transform: translate(-100%, -100%) translate3d(80px, 20px, 0); }
+    50% { transform: translate(-100%, -100%) translate3d(80px, 120px, 0); }
+    75% { transform: translate(-100%, -100%) translate3d(-20px, 100px, 0); }
+    100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+}
+
+/* Szklana warstwa (Glassmorphism) */
+.sidebar-inner .glass-content {
+    background: rgba(30, 41, 59, 0.60);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 14px;
+    padding: 30px;
     text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Ważne: zapobiega rozpychaniu karty przez padding */
+}
+
+/* Style tekstów i zdjęcia wewnątrz karty */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.about-sidebar .role {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.about-sidebar .location {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.about-sidebar .education-mini,
+.about-sidebar .tech-mini {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* =========================================
+   PRAWA STRONA (Główny tekst)
+   ========================================= */
+.about-main {
+    flex: 1; /* Wypełnia resztę dostępnego miejsca */
+    text-align: left;
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--text-main);
+    border-bottom: 1px solid #334155;
+    padding-bottom: 15px;
+}
+
+.about-heading span {
+    color: var(--accent);
+}
+
+.about-main p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.about-main p strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSYWNOŚĆ (Dla telefonów)
+   ========================================= */
+@media (max-width: 800px) {
+    .about-container {
+        flex-direction: column; /* Zrzuca tekst pod kartę */
+        align-items: center;
+    }
+    
+    .about-sidebar {
+        flex: auto;
+        width: 100%;
+        max-width: 320px; /* Na telefonie karta też nie będzie za szeroka */
+    }
 }
 
 /* --- LISTA CERTYFIKATÓW --- */
 .cert-list {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
     border-top: 1px solid #334155; /* Górna linia oddzielająca (jak na zdjęciu) */
 }
